@@ -12,7 +12,19 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('landing');
 });
 
-Route::get('/test', 'Getfirst@show');
+Route::get('/ings','semanticController@searchIngs');
+
+//search Foods containing ingredients
+Route::post('/search',[
+    'as' => 'searchFood',
+    'uses' => 'semanticController@searchFood'
+]);
+
+//search ingredients
+Route::post('/searchh',[
+    'as' => 'searchIngs',
+    'uses' => 'semanticController@searchIngs'
+]);
