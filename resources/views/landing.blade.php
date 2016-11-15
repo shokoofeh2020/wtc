@@ -40,12 +40,17 @@
 
 @section('content')
     <div class="container">
-        <div class="chips chips-placeholder" >
-        </div>
-
-        <a class="btn-floating btn waves-effect waves-light red" onclick="$(this).searchFood();">
-            <i class="material-icons">search</i>
-        </a>
+       <div class="row">
+           <div class="col s10 m10 l10">
+               <div class="chips chips-placeholder" >
+               </div>
+           </div>
+           <div class="col s2 m2 l2">
+               <a class="btn-floating btn waves-effect waves-light red" onclick="$(this).searchFood();">
+                   <i class="material-icons">search</i>
+               </a>
+           </div>
+       </div>
 
         <label class="active" for="multipleInput">Multiple autocomplete: </label>
         <div class="autocomplete" id="multiple">
@@ -60,10 +65,7 @@
         <div id="food">
             <div id="extracting"></div>
         </div>
-
-
     </div>
-
 @stop
 
 @section('js-footer')
