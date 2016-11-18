@@ -1,0 +1,64 @@
+<http://data.kasabi.com/dataset/foodista/food/222YXBYC> <http://purl.org/dc/terms/description> "A Cherry Native To The Channel Islands Of Southern California. The Fruits Ripen To Red And Are Cherry-like In Appearance And Flavor, Though Not As Sweet" .
+<http://data.kasabi.com/dataset/foodista/food/222YXBYC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://linkedrecipes.org/schema/Food> .
+<http://data.kasabi.com/dataset/foodista/food/222YXBYC> <http://www.w3.org/2000/01/rdf-schema#label> "Catalina Island Cherry" .
+<http://data.kasabi.com/dataset/foodista/food/222YXBYC> <http://xmlns.com/foaf/0.1/depiction> "http://cloud.foodista.com/content/misc/placeholders/food_big" .
+<http://data.kasabi.com/dataset/foodista/food/222YXBYC> <http://xmlns.com/foaf/0.1/isPrimaryTopicOf> <http://www.foodista.com/food/222YXBYC/catalina-island-cherry> .
+<http://data.kasabi.com/dataset/foodista/food/223N2653> <http://purl.org/dc/terms/description> "There Are Two Different Types Of Tofu Available In The Market, The Firm Rough Type And The Soft Silky Type. Nigari Extra Firm Tofu Is From The Firm, Rough Type. It Is Made With \"nigari\". Nigari Is A Tofu Coagulant That Is Most Commonly Used In Japan; It\u2019s Magnesium Chloride With Other Trace Minerals. Gypsum Or Calcium Sulfate Is Used In China. Nigari Makes A Firmer Tofu, It Is Is Available Powdered Or Flaked. Firm Tofu Is Usually Simmered, Stir-fried Or Deep Fried In Dishes" .
+<http://data.kasabi.com/dataset/foodista/food/223N2653> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://linkedrecipes.org/schema/Food> .
+<http://data.kasabi.com/dataset/foodista/food/223N2653> <http://www.w3.org/2000/01/rdf-schema#label> "Nigari Extra Firm Tofu" .
+<http://data.kasabi.com/dataset/foodista/food/223N2653> <http://www.w3.org/2004/02/skos/core#altLabel> "Dow Fu Kon" .
+<http://data.kasabi.com/dataset/foodista/food/223N2653> <http://www.w3.org/2004/02/skos/core#altLabel> "Tofu" .
+<http://data.kasabi.com/dataset/foodista/food/223N2653> <http://xmlns.com/foaf/0.1/depiction> "http://cloud.foodista.com/content/images/b50b2233761f021df9aaa94ec4e4d33b31264a11_607x400.jpg" .
+<http://data.kasabi.com/dataset/foodista/food/223N2653> <http://xmlns.com/foaf/0.1/isPrimaryTopicOf> <http://www.foodista.com/food/223N2653/nigari-extra-firm-tofu> .
+<http://data.kasabi.com/dataset/foodista/food/225CHT3F> <http://purl.org/dc/terms/description> "Red Currants May Be Used Fresh In Tarts, Pies, Jams, Preserves, And Used As An Alternative To Traditional Cranberry Sauce. Redcurrants Contain Vitamin C, Iron, Potassium And Fiber. They Are Good For The Immune System And The Antiseptic Properties Of Redcurrant Jelly Make It An Effective Treatment Of Minor Burns - After Cooling The Affected Area With Cold Water" .
+<http://data.kasabi.com/dataset/foodista/food/225CHT3F> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://linkedrecipes.org/schema/Food> .
+<http://data.kasabi.com/dataset/foodista/food/225CHT3F> <http://www.w3.org/2000/01/rdf-schema#label> "Red Currant" .
+<http://data.kasabi.com/dataset/foodista/food/225CHT3F> <http://www.w3.org/2004/02/skos/core#altLabel> "Johannisbeeren (German)" .
+<http://data.kasabi.com/dataset/foodista/food/225CHT3F> <http://xmlns.com/foaf/0.1/depiction> "http://cloud.foodista.com/content/images/c0681049f78801e33d838ef77c87d44ec6ce13a6_607x400.jpg" .
+<http://data.kasabi.com/dataset/foodista/food/225CHT3F> <http://xmlns.com/foaf/0.1/isPrimaryTopicOf> <http://www.foodista.com/food/225CHT3F/red-currant> .
+<http://data.kasabi.com/dataset/foodista/food/22HNNJZM> <http://purl.org/dc/terms/description> "Florina Apples Large, Red Striped Fruit. Aromatic Spicy Flavor. Vigorous Tree. Immune Toscab. This Fruit Ripens In Month Of Late October And It Keeps Into January. These Apples Generally Grows In Moist Climatic Conditions And In Chilled Areas. Most Liked Variety Among Apples" .
+<http://data.kasabi.com/dataset/foodista/food/22HNNJZM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://linkedrecipes.org/schema/Food> .
+<http://data.kasabi.com/dataset/foodista/food/22HNNJZM> <http://www.w3.org/2000/01/rdf-schema#label> "Florina  Apple" .
+<http://data.kasabi.com/dataset/foodista/food/22HNNJZM> <http://xmlns.com/foaf/0.1/depiction> "http://cloud.foodista.com/content/misc/placeholders/food_big" .
+<http://data.kasabi.com/dataset/foodista/food/22HNNJZM> <http://xmlns.com/foaf/0.1/isPrimaryTopicOf> <http://www.foodista.com/food/22HNNJZM/florina-apple> .
+<http://data.kasabi.com/dataset/foodista/food/22MTCPPL> <http://purl.org/dc/terms/description> "Merton Russet Ia An Antique Variety Of Apple Characterized By Its Rough Mottled, Or Russeted, Skin. Like Most Russeted Apples The Merton Is Exceptionally Fragrant And Flavorful. Unfortunately, Many Consumers Find The Russeted Skin Not To Their Liking Hence It Is Hard To Come By Comercially. Rootstock Is Available From Specialty Nurseries" .
+<http://data.kasabi.com/dataset/foodista/food/22MTCPPL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://linkedrecipes.org/schema/Food> .
+<http://data.kasabi.com/dataset/foodista/food/22MTCPPL> <http://www.w3.org/2000/01/rdf-schema#label> "Merton Russet Apple" .
+<http://data.kasabi.com/dataset/foodista/food/22MTCPPL> <http://xmlns.com/foaf/0.1/depiction> "http://cloud.foodista.com/content/misc/placeholders/food_big" .
+<http://data.kasabi.com/dataset/foodista/food/22MTCPPL> <http://xmlns.com/foaf/0.1/isPrimaryTopicOf> <http://www.foodista.com/food/22MTCPPL/merton-russet-apple> .
+<http://data.kasabi.com/dataset/foodista/food/22NF4G57> <http://purl.org/dc/terms/description> "Narrow Umbrian Pasta Ribbons That Are Thicker Than Spaghetti And Resemble Shoestrings. From The Italian Word \"stringhe\" Meaning Shoestrings" .
+<http://data.kasabi.com/dataset/foodista/food/22NF4G57> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://linkedrecipes.org/schema/Food> .
+<http://data.kasabi.com/dataset/foodista/food/22NF4G57> <http://www.w3.org/2000/01/rdf-schema#label> "Stringozzi" .
+<http://data.kasabi.com/dataset/foodista/food/22NF4G57> <http://xmlns.com/foaf/0.1/depiction> "http://cloud.foodista.com/content/images/94542b85012586355d68bbddb4bee9e82a02a66e_607x400.jpg" .
+<http://data.kasabi.com/dataset/foodista/food/22NF4G57> <http://xmlns.com/foaf/0.1/isPrimaryTopicOf> <http://www.foodista.com/food/22NF4G57/stringozzi> .
+<http://data.kasabi.com/dataset/foodista/food/22R283D5> <http://purl.org/dc/terms/description> "The Pacific Golden Chanterelle Has Recently Been Recognized As A Separate Species From" .
+<http://data.kasabi.com/dataset/foodista/food/22R283D5> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://linkedrecipes.org/schema/Food> .
+<http://data.kasabi.com/dataset/foodista/food/22R283D5> <http://www.w3.org/2000/01/rdf-schema#label> "Pacific Golden Chanterelle" .
+<http://data.kasabi.com/dataset/foodista/food/22R283D5> <http://xmlns.com/foaf/0.1/depiction> "http://cloud.foodista.com/content/misc/placeholders/food_big" .
+<http://data.kasabi.com/dataset/foodista/food/22R283D5> <http://xmlns.com/foaf/0.1/isPrimaryTopicOf> <http://www.foodista.com/food/22R283D5/pacific-golden-chanterelle> .
+<http://data.kasabi.com/dataset/foodista/food/22ZMW3QP> <http://purl.org/dc/terms/description> "A Fragrant Cider Apple With A Yellow-green Skin With Flecks Of Dark Red, And A Bittersweet Taste" .
+<http://data.kasabi.com/dataset/foodista/food/22ZMW3QP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://linkedrecipes.org/schema/Food> .
+<http://data.kasabi.com/dataset/foodista/food/22ZMW3QP> <http://www.w3.org/2000/01/rdf-schema#label> "Dabinett Apple" .
+<http://data.kasabi.com/dataset/foodista/food/22ZMW3QP> <http://xmlns.com/foaf/0.1/depiction> "http://cloud.foodista.com/content/misc/placeholders/food_big" .
+<http://data.kasabi.com/dataset/foodista/food/22ZMW3QP> <http://xmlns.com/foaf/0.1/isPrimaryTopicOf> <http://www.foodista.com/food/22ZMW3QP/dabinett-apple> .
+<http://data.kasabi.com/dataset/foodista/food/22ZNKT6P> <http://purl.org/dc/terms/description> "Venison Is A Term Used To Describe The Meat From Any Of A Variety Of Small And Medium Deer Species. Depending On The Cut, It Can Be Roasted, Stewed, Or Ground Into Sausage. Typically Venison Is Considered Game, But It Is Now Also Farm-raised In New Zealand And Elsewhere. One Useful Tip When Preparing Venison Or Elk Is To Soak The Raw Meat In Milk Or Buttermilk Overnight, Or At Least An Hour Before Cooking To Take Away Some Of It's Gamey Taste" .
+<http://data.kasabi.com/dataset/foodista/food/22ZNKT6P> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://linkedrecipes.org/schema/Food> .
+<http://data.kasabi.com/dataset/foodista/food/22ZNKT6P> <http://www.w3.org/2000/01/rdf-schema#label> "Venison" .
+<http://data.kasabi.com/dataset/foodista/food/22ZNKT6P> <http://xmlns.com/foaf/0.1/depiction> "http://cloud.foodista.com/content/images/f4499474b37d5be144762063b3b433631e223ce8_607x400.jpg" .
+<http://data.kasabi.com/dataset/foodista/food/22ZNKT6P> <http://xmlns.com/foaf/0.1/isPrimaryTopicOf> <http://www.foodista.com/food/22ZNKT6P/venison> .
+<http://data.kasabi.com/dataset/foodista/food/234VFY7X> <http://purl.org/dc/terms/description> "" .
+<http://data.kasabi.com/dataset/foodista/food/234VFY7X> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://linkedrecipes.org/schema/Food> .
+<http://data.kasabi.com/dataset/foodista/food/234VFY7X> <http://www.w3.org/2000/01/rdf-schema#label> "Hipak Carrot" .
+<http://data.kasabi.com/dataset/foodista/food/234VFY7X> <http://xmlns.com/foaf/0.1/depiction> "http://cloud.foodista.com/content/misc/placeholders/food_big" .
+<http://data.kasabi.com/dataset/foodista/food/234VFY7X> <http://xmlns.com/foaf/0.1/isPrimaryTopicOf> <http://www.foodista.com/food/234VFY7X/hipak-carrot> .
+<http://data.kasabi.com/dataset/foodista/food/238TL43V> <http://purl.org/dc/terms/description> "A Cereal Grain That Was Domesticated In Mesoamerica Then Spread Throughout The American Continents. It Is The Most Widely Grown Crop In The Americas. The Term Maize Comes From The Spanish Word \"maiz\", Which Was The Most Common Form Heard In The United Kingdom. In Canada And The U.s. It Is Simply Known As \"corn\", Which Was Shortened From \"indian Corn\". Nowadays, Indian Corn Is Used In Canada And The U.s. To Describe The Multi-colored Cultivar" .
+<http://data.kasabi.com/dataset/foodista/food/238TL43V> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://linkedrecipes.org/schema/Food> .
+<http://data.kasabi.com/dataset/foodista/food/238TL43V> <http://www.w3.org/2000/01/rdf-schema#label> "Maize" .
+<http://data.kasabi.com/dataset/foodista/food/238TL43V> <http://www.w3.org/2004/02/skos/core#altLabel> "Indian Corn" .
+<http://data.kasabi.com/dataset/foodista/food/238TL43V> <http://xmlns.com/foaf/0.1/depiction> "http://cloud.foodista.com/content/images/40eef07a8679a5988c6d5732cfbe21c51d758c91_607x400.jpg" .
+<http://data.kasabi.com/dataset/foodista/food/238TL43V> <http://xmlns.com/foaf/0.1/isPrimaryTopicOf> <http://www.foodista.com/food/238TL43V/maize> .
+<http://data.kasabi.com/dataset/foodista/food/238ZGCL4> <http://purl.org/dc/terms/description> "" .
+<http://data.kasabi.com/dataset/foodista/food/238ZGCL4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://linkedrecipes.org/schema/Food> .
+<http://data.kasabi.com/dataset/foodista/food/238ZGCL4> <http://www.w3.org/2000/01/rdf-schema#label> "Red Prince Red Delicious Apple" .
+<http://data.kasabi.com/dataset/foodista/food/238ZGCL4> <http://xmlns.com/foaf/0.1/depiction> "http://cloud.foodista.com/content/misc/placeholders/food_big" .
+<http://data.kasabi.com/dataset/foodista/food/238ZGCL4> <http://xmlns.com/foaf/0.1/isPrimaryTopicOf> <http://www.foodista.com/food/238ZGCL4/red-prince-red-delicious-apple> .
