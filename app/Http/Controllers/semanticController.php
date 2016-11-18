@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
 
+
 class semanticController extends Controller
 {
     //
@@ -85,5 +86,26 @@ class semanticController extends Controller
         );
 
         dd($result);
+    }
+
+    public function convert(){
+        //require_once "easyrdf\easyrdf\lib\EasyRdf.php";
+            // Parse the input
+        $graph = new  \EasyRdf_Graph('http://wtc.app/foodista-');
+
+            $graph->load('http://wtc.app/foodista-', 'turtle');
+
+            // Lookup the output format
+            $format = \EasyRdf_Format::getFormat('rdf');
+            // Serialise to the new output format
+            $output = $graph->serialise($format);
+            if (!is_scalar($output)) {
+                $output = var_export($output, true);
+            }
+            // Send the output back to the client
+
+            //header('Content-Type: ' . $format->getDefaultMimeType());
+            dd($output);
+
     }
 }

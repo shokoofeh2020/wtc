@@ -17,6 +17,8 @@ Route::get('/', function () {
 
 Route::get('/ings','semanticController@searchIngs');
 
+Route::get('/con','semanticController@convert');
+
 //search Foods containing ingredients
 Route::post('/search',[
     'as' => 'searchFood',
