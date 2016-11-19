@@ -58,6 +58,28 @@ class semanticController extends Controller
 
     }
 
+    public function foodista(Request $request){
+
+        // Setup some additional prefixes for Foodista
+        \EasyRdf_Namespace::set('rdfs', '<http://www.w3.org/2000/01/rdf-schema#>');
+        \EasyRdf_Namespace::set('owl', '<http://www.w3.org/2000/01/rdf-schema#>');
+
+
+        $sparql = new \EasyRdf_Sparql_Client('http://localhost:3030/foodista/query');
+
+
+        //run query
+        $result = $sparql->query(
+            "SELECT ?subject ?predicate ?object
+WHERE {
+  ?subject ?predicate ?object
+}
+LIMIT 250"
+        );
+
+        dd($result);
+    }
+
     public function searchIngs(Request $request){
 // Setup some additional prefixes for DBpedia
         \EasyRdf_Namespace::set('category', 'http://dbpedia.org/resource/Category:');

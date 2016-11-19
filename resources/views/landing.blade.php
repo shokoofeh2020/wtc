@@ -36,6 +36,10 @@
             height: 2.4rem;
         }
     </style>
+
+    <style>
+        body {  padding: 3em; }
+    </style>
 @stop
 
 @section('content')
