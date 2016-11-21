@@ -66,7 +66,7 @@
             <input type="hidden" name="multipleHidden" />
         </div>
 
-        <div id="food">
+        <div style="width:800px; margin:0 auto;" id="food">
             <div id="extracting"></div>
         </div>
     </div>
@@ -114,7 +114,20 @@
                 method: "POST",
                 async: true,
                 beforeSend: function(){
-                    $('#extracting').html("<img src='{{URL::to('/images/ajax-loader.gif')}}' />");
+                    $('#extracting').html(
+                            '<div class="preloader-wrapper big active">'+
+                            '<div class="spinner-layer spinner-blue">'+
+                            '<div class="circle-clipper left">'+
+                            '<div class="circle"></div>'+
+                            '</div>' +
+                            '<div class="gap-patch">'+
+                            '<div class="circle"></div>'+
+                            '</div>' +
+                            '<div class="circle-clipper right">'+
+                            '<div class="circle"></div>'+
+                            '</div>'+
+                            '</div>'
+                    );
                 },
                 success: function(response){
                     //alert(action);
@@ -146,7 +159,21 @@
                 method: "POST",
                 async: true,
                 beforeSend: function(){
-                    $('#moreFood').html("<img src='{{URL::to('/images/ajax-loader.gif')}}' />");
+                    //$('#moreFood').html("<img src='{{URL::to('/images/ajax-loader.gif')}}' />");
+                    $('#moreFood').html(
+                            '<div class="preloader-wrapper big active">'+
+                                    '<div class="spinner-layer spinner-blue">'+
+                                        '<div class="circle-clipper left">'+
+                                            '<div class="circle"></div>'+
+                                        '</div>' +
+                                        '<div class="gap-patch">'+
+                                            '<div class="circle"></div>'+
+                                        '</div>' +
+                                        '<div class="circle-clipper right">'+
+                                        '<div class="circle"></div>'+
+                                    '</div>'+
+                            '</div>'
+                    );
                 },
                 success: function(response){
                     //alert(action);
