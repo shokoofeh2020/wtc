@@ -26,10 +26,12 @@
 <div class="row">
         @foreach($result as $item)
                 @php $x=explode('/',$item->food->getUri()) @endphp
+                
+        
                 <div class="col s12 m4 l3">
                         <div class="card small sticky-action">
                                 <div class="card-image waves-effect waves-block waves-light">
-                                        <img class="activator" src="images/food1.jpeg">
+                                        <img class="activator" src="{{$item->img->getUri()}}">
                                 </div>
                                 <div class="card-content">
                                         <span class="card-title activator grey-text text-darken-4">{{end($x)}}<i class="material-icons right">more_vert</i></span>
