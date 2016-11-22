@@ -19,12 +19,20 @@ Route::get('/ings','semanticController@searchIngs');
 
 Route::get('/con','semanticController@convert');
 
-Route::get('/foodista','semanticController@foodista');
+Route::get('/foodistaa',function(){
+	return view('foodista');
+});
 
 //search Foods containing ingredients
 Route::post('/search',[
     'as' => 'searchFood',
     'uses' => 'semanticController@searchFood'
+]);
+
+//search Foods containing ingredients
+Route::post('/searchF',[
+		'as' => 'searchF',
+		'uses' => 'semanticController@foodista3'
 ]);
 
 //search ingredients
