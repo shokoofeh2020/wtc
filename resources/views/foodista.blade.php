@@ -5,6 +5,14 @@
 @stop
 
 @section('CSS')
+	<!--  General fonts -->
+	<style>
+		.Logo {
+			text-align: center;
+			font-size : 60px;
+			font-family : 'Tahoma';
+		}
+	</style>
     <!-- Styles Autocomplete-->
     <style>
         .autocomplete {
@@ -36,10 +44,6 @@
             height: 2.4rem;
         }
     </style>
-
-    <style>
-        body {  padding: 3em; }
-    </style>
 @stop
 
 @section('content')
@@ -48,7 +52,7 @@
 			<h1>What To Cook </h1>
 			<img src=images/Logo.jpg height =100px, width = 100%/>
 			<p></p>
-			
+		</div>
 		<div class="col s10 m10 l10">
 				<p> What do you have in hand?</p>
                {{--input box for getting favorite ingredients--}}
@@ -62,13 +66,14 @@
                {{--select meal--}}
                <select id="meal" class="input-field ">
                    <option value="" disabled selected>Choose your option</option>
-                   <option value="1">Breakfast</option>
-                   <option value="2">Lunch</option>
-                   <option value="3">Dinner</option>
+                   <option value="Breakfast">Breakfast</option>
+                   <option value="Brunch">Branch</option>
+                   <option value="Lunch">Lunch</option>
+                   <option value="Beverage">Beverage</option>
                </select>
                <label>Select your meal:</label>
 
-</div>
+		</div>
 	
         <a class="btn-floating btn waves-effect waves-light red" onclick="$(this).searchFood();">
             <i class="material-icons">search</i>
@@ -150,7 +155,7 @@
 
             $.ajax({
             	data:{likes:ings,dislikes:ingsNo,when:$('#meal').val()},
-                url: "{{URL::route('searchFood')}}",
+                url: "{{URL::route('searchF')}}",
                 method: "POST",
                 async: true,
                 beforeSend: function(){
