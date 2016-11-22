@@ -54,18 +54,20 @@
                <br>
                {{--select meal--}}
                <select id="meal" class="input-field ">
-                   <option value="" disabled selected>Choose your option</option>
+                   <option value="" disabled selected>Choose your meal</option>
                    <option value="1">Breakfast</option>
                    <option value="2">Lunch</option>
                    <option value="3">Dinner</option>
                </select>
-               <label>Select your meal:</label>
+               <label for="meal">Select your meal:</label>
 
            </div>
            <div class="col s2 m2 l2">
                <a class="btn-floating btn waves-effect waves-light red" onclick="$(this).searchFood();">
                    <i class="material-icons">search</i>
                </a>
+
+
            </div>
        </div>
 
