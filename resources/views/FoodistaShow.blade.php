@@ -1,9 +1,9 @@
-{{--<div>--}}
-        {{--@foreach($result as $item)--}}
-                {{--{{dd(\EasyRdf_Graph::newAndLoad($item->food->getUri()))}}--}}
-        {{--@endforeach--}}
+<!-- {{--<div>--}} -->
+<!--         {{--@foreach($result as $item)--}} -->
+<!--                 {{--{{dd(\EasyRdf_Graph::newAndLoad($item->subjectName->getUri()))}}--}} -->
+<!--         {{--@endforeach--}} -->
 
-{{--</div>--}}
+<!-- {{--</div>--}} -->
 
 <style>
         .card {
@@ -25,17 +25,15 @@
 </style>
 <div class="row">
         @foreach($result as $item)
-                @php $x=explode('/',$item->food->getUri()) @endphp
-                
-        
+        	
                 <div class="col s12 m4 l3">
-                        <div class="card small sticky-action">
+                        <div class="card medium sticky-action">
                                 <div class="card-image waves-effect waves-block waves-light">
-                                        <img class="activator" src="{{$item->img->getUri()}}" height =100 weidth =100>
+                                        <img class="activator" src="{{$item->img->getValue()}}" height =150 weidth =100>
                                 </div>
                                 <div class="card-content">
-                                        <span class="card-title activator grey-text text-darken-4">{{end($x)}}<i class="material-icons right">more_vert</i></span>
-                                        <p><a href="{{$item->food->getUri()}}">Know more...</a></p>
+                                        <span style="font-size: 1;" class="card-title activator grey-text text-darken-4">{{$item->subjectName->getValue()}}<i class="material-icons right">more_vert</i></span>
+                                        <p><a href="{{$item->links->getUri()}}">Know more...</a></p>
                                 </div>
                                 <div class="card-reveal">
                                         <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
