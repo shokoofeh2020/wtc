@@ -15,15 +15,6 @@ class semanticController extends Controller
 //        $graph = new \EasyRdf_Graph();
 //        $parser->parse($graph, $file, 'rdfxml', null);
 //        print $graph->dump('text');
-        echo 'you like:';
-        foreach ($request->likes as $like)
-                echo '<li>'.$like.'</li>';
-        echo '<br>you dislike:';
-        foreach ($request->dislikes as $dislike)
-            echo '<li>'.$dislike.'</li>';
-        echo '<br>you whant to eat me at:';
-        dd($request->when);
-
 
         ////////////////////////////
 
@@ -45,14 +36,15 @@ class semanticController extends Controller
 
         //run query
         $result = $sparql->query(
-            "SELECT distinct ?food ?ing
+            "SELECT distinct ?food ?ing ?img
              WHERE {   
                ?food rdf:type <http://dbpedia.org/ontology/Food> .
-               ?food dbo:ingredientName ?ing".
+               ?food dbo:ingredientName ?ing.
+        	   ?food foaf:depiction ?img".
                 $filter .
             "}
                  ORDER BY ?food
-                 limit 100"
+                 limit 16"
         );
 
 //        foreach ($result as $row) {
@@ -67,27 +59,70 @@ class semanticController extends Controller
 
     }
 
-    public function foodista(Request $request){
+    public function foodista3(Request $request){
 
         // Setup some additional prefixes for Foodista
-        \EasyRdf_Namespace::set('rdfs', '<http://www.w3.org/2000/01/rdf-schema#>');
-        \EasyRdf_Namespace::set('owl', '<http://www.w3.org/2000/01/rdf-schema#>');
+        \EasyRdf_Namespace::set('rdfs', 'http://www.w3.org/2000/01/rdf-schema#');
+        \EasyRdf_Namespace::set('owl', 'http://www.w3.org/2002/07/owl#');
+        \EasyRdf_Namespace::set('rdf', 'http://www.w3.org/1999/02/22-rdf-syntax-ns#');
 
+//        echo 'you like:';
+//        foreach ($request->likes as $like)
+//        	echo '<li>'.$like.'</li>';
+//        echo '<br>you dislike:';
+//        foreach ($request->dislikes as $dislike)
+//            echo '<li>'.$dislike.'</li>';
+//        echo '<br>you whant to eat me at:';
+//        dd($request->when);
+        $sparql = new \EasyRdf_Sparql_Client('http://localhost:3030/Foodista/query');
+         
 
-        $sparql = new \EasyRdf_Sparql_Client('http://localhost:3030/foodista/query');
-
-
+        
+        $i=1;
+        $filter=' ';
+        $labels=' ';
+        $objs=' ';
+        foreach ($request->likes as $ing){
+        	$filter=$filter."filter contains(?ing".$i.",'".$ing."') .\n";
+        	$labels=$labels."?obj".$i." rdfs:label ?ing".$i.".\n";
+        	$objs=$objs." ?obj".$i.",";
+        	$i=$i+1;
+	    }
+	    
+	    $filterN=' ';
+	    $labelsN=' ';
+	    $objsN=' ';
+	     foreach ($request->dislikes as $ing){
+	    	$filterN=$filterN."filter (!contains(?ing".$i.",'".$ing."') ).\n";
+	    	$labelsN=$labelsN." ?objN".$i." rdfs:label ?ing".$i.".\n";
+	    	$objsN=$objsN.", ?obj".$i;
+	    	$i=$i+1;
+	    }
+	     $objs=substr($objs, 0, -1);
+	     $objsN=substr($objsN, 0, -1);
+	    
+	    ini_set('max_execution_time', 180); //3 minutes
+	    
         //run query
-        $result = $sparql->query(
-            "SELECT ?subject ?predicate ?object
-WHERE {
-  ?subject ?predicate ?object
-}
-LIMIT 250"
-        );
-
-        dd($result);
-    }
+		$result = $sparql->query(
+				"SELECT   distinct ?subjectName ?img ?links
+					WHERE {
+					      ?subject <http://linkedrecipes.org/schema/ingredient>  ".$objs.$objsN.".\n
+					      ?subject <http://purl.org/dc/terms/title> ?subjectName.\n
+						  ?subject <http://xmlns.com/foaf/0.1/isPrimaryTopicOf> ?links.	\n
+						  ?subject <http://xmlns.com/foaf/0.1/depiction> ?img.\n
+					      ".$labels.$labelsN."
+					      ".$filter.$filterN."
+					}
+					Limit 16"
+				);
+		
+		//dd($result);
+		return \View::make("FoodistaShow",compact('result'))
+		//->with("name", "something")
+		->render();
+        
+            }
 
     public function searchIngs(Request $request){
 // Setup some additional prefixes for DBpedia
@@ -119,24 +154,4 @@ LIMIT 250"
         dd($result);
     }
 
-    public function convert(){
-        //require_once "easyrdf\easyrdf\lib\EasyRdf.php";
-            // Parse the input
-        $graph = new  \EasyRdf_Graph('http://wtc.app/foodista-');
-
-            $graph->load('http://wtc.app/foodista-', 'turtle');
-
-            // Lookup the output format
-            $format = \EasyRdf_Format::getFormat('rdf');
-            // Serialise to the new output format
-            $output = $graph->serialise($format);
-            if (!is_scalar($output)) {
-                $output = var_export($output, true);
-            }
-            // Send the output back to the client
-
-            //header('Content-Type: ' . $format->getDefaultMimeType());
-            dd($output);
-
-    }
-}
+ }
