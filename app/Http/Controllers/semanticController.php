@@ -15,6 +15,15 @@ class semanticController extends Controller
 //        $graph = new \EasyRdf_Graph();
 //        $parser->parse($graph, $file, 'rdfxml', null);
 //        print $graph->dump('text');
+        echo 'you like:';
+        foreach ($request->likes as $like)
+                echo '<li>'.$like.'</li>';
+        echo '<br>you dislike:';
+        foreach ($request->dislikes as $dislike)
+            echo '<li>'.$dislike.'</li>';
+        echo '<br>you whant to eat me at:';
+        dd($request->when);
+
 
         ////////////////////////////
 
