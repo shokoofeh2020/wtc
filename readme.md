@@ -10,10 +10,15 @@
 How to run this project without installing laravel. (Windows)
 
 1 Install - [Fuseki](https://jena.apache.org/download/#apache-jena-fuseki) to use as RDF store.
+
 2 Install - [Xampp](https://www.apachefriends.org/download.html), Actually it installs mysql server as well, but just need Apache as local server.
+
 3 download the project from git and extract it to localhost folder with name 'wtc'. For example, if you installed Xampp in drive C:, then you should have your project in C:\xampp\htdocs\wtc
+
 4 Add a new localhost to system hosts: Open file called 'hosts' form C:\Windows\System32\drivers\etc and add this line at the end of the file: 127.0.0.1	wtc.dev
+
 5 Install - [composer](https://getcomposer.org/download/). Open command prompt, go to wtc folder, run the command "Composer update". It will compile all files and it may take several minutes.
+
 6 Now one can run the project in the browser. One Just need to write wtc.dev in address bar and it will start. If it doesn't work, please make sure that Xampp is running, its icon is active in the system tray, and Apache is started in Xampp's control. In addition, make sure Fuseki is running, the address of Fuseki should be localhost:3030. Otherwise, the address of Fuseki should be updated in wtc/app/Http/Controllers/semanticcontroller.php.
 
 
