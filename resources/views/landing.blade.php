@@ -88,12 +88,12 @@
 
            //initializing Chips and setting placeholders
             $('#ingrediants').material_chip({
-                placeholder: 'I like',
-                secondaryPlaceholder: '+like',
+               //placeholder: 'I like',
+               secondaryPlaceholder: '+Like',
             });
             $('#pleaseNo').material_chip({
-                placeholder: 'I hate',
-                secondaryPlaceholder: '+dislike',
+                //placeholder: 'I hate',
+                secondaryPlaceholder: '+Dislike',
             });
         });
 
