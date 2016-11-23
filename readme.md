@@ -26,12 +26,15 @@
 
 ## Possible issues:
 
-1 Xampp has not been started or is not visible in system tray.
+1. Xampp has not been started or is not visible in system tray.
+
 2. Xampp is started but Apache could not start through Xampp's control panel. It usually happens when the default port (80, 8080, ...) are blocked by other applications
+
 3. Fuseki is not running, the default address and port of Fuseki should be like localhost:3030 and it's enough. If for any reason you have changed the defualt port please update controller file located in wtc/app/Http/Controllers/semanticController.php.
 
 
-## Technical informations
+
+## Technical information
 
 - Language:
   Backend: PHP
