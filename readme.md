@@ -22,7 +22,7 @@
 
 8 Open command prompt, go to wtc folder,e.g: cd c:\xampp\htdocs\wtc
 
-9 Run the command "Composer update". It will find, download and add all needed packages. Please be patient. It may take some minutes.
+9 Run the command "Composer update". It will find, download and add all needed packages. Please be patient. It may take some minutes. 
 
 10 Now you are able to run the project in your favorite browser. Tyoe "wtc.dev" in addressbar and it should show you the landing page. 
 
@@ -46,6 +46,7 @@
 - Architecture: MVC
 - Web Server: Apache  , Nginx 
 - Local RDF Store: [Fuseki 2.4.1] (https://jena.apache.org/download/#apache-jena-fuseki)
+- Library: [EasyRDF](http://www.easyrdf.org/)
 
 
 ## License
