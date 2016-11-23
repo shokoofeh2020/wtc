@@ -1,60 +1,47 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img width="150"src="https://laravel.com/laravel.png"></a></p>
+## Install
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+1 Install - [Fuseki RDF Store](https://jena.apache.org/download/#apache-jena-fuseki).
+1.1 Create a new dataset named foodista and import Foodista triples from corresponding N-Quads file into dataset. 
 
-How to run this project without installing laravel. (Windows)
+2 Install a local Web Server - [Xampp](https://www.apachefriends.org/download.html), You need to make sure that Apache is running flawlessly. The project has been also tested successfully with other web servers like Nginx. 
 
-1 Install - [Fuseki](https://jena.apache.org/download/#apache-jena-fuseki) to use as RDF store.
+3 Download or Clone the project from Github.
 
-2 Install - [Xampp](https://www.apachefriends.org/download.html), Actually it installs mysql server as well, but just need Apache as local server.
+4 Extract it into root folder(if you're using Xampp, move it to the/path/to/your/xampp/folder/htdocs).
 
-3 download the project from git and extract it to localhost folder with name 'wtc'. For example, if you installed Xampp in drive C:, then you should have your project in C:\xampp\htdocs\wtc
+5 Rename the extracted folder to 'wtc'. Now the directory should seems like this: for example, if you installed Xampp in drive C:, then you should have your project in C:\xampp\htdocs\wtc
 
-4 Add a new localhost to system hosts: Open file called 'hosts' form C:\Windows\System32\drivers\etc and add this line at the end of the file: 127.0.0.1	wtc.dev
+6 Edit the "hosts" file to enable mapping hostname to its IP address. 
+6.1 in Windows, you may find it here: C:\Windows\System32\drivers\etc and in Linux its usually located in: 
+6.2 Most likely you're using IP version 4 address so add this line: 127.0.0.1	wtc.dev
 
-5 Install - [composer](https://getcomposer.org/download/). Open command prompt, go to wtc folder, run the command "Composer update". It will compile all files and it may take several minutes.
+7 Install - [composer](https://getcomposer.org/download/). Consult this site and make sure composer has been installed correctly. 
 
-6 Now one can run the project in the browser. One Just need to write wtc.dev in address bar and it will start. If it doesn't work, please make sure that Xampp is running, its icon is active in the system tray, and Apache is started in Xampp's control. In addition, make sure Fuseki is running, the address of Fuseki should be localhost:3030. Otherwise, the address of Fuseki should be updated in wtc/app/Http/Controllers/semanticcontroller.php.
+8 Open command prompt, go to wtc folder,e.g: cd c:\xampp\htdocs\wtc
 
+9 Run the command "Composer update". It will find, download and add all needed packages. Please be patient. It may take some minutes.
 
-
-
+10 Now you are able to run the project in your favorite browser. Tyoe "wtc.dev" in addressbar and it should show you the landing page. 
 
 
+## Possible issues:
 
-## About Laravel
+1 Xampp has not been started or is not visible in system tray.
+2. Xampp is started but Apache could not start through Xampp's control panel. It usually happens when the default port (80, 8080, ...) are blocked by other applications
+3. Fuseki is not running, the default address and port of Fuseki should be like localhost:3030 and it's enough. If for any reason you have changed the defualt port please update controller file located in wtc/app/Http/Controllers/semanticController.php.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Technical informations
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications. A superb combination of simplicity, elegance, and innovation give you tools you need to build any application with which you are tasked.
+- Language:
+  Backend: PHP
+  FrontEnd: HTML5, CSS3, JQuery, [MaterializeCSS](http://materializecss.com/)
+- Framework: [Laravel 5.3](https://laravel.com/) 
+- Architecture: MVC
+- Web Server: Apache  , Nginx 
+- Local RDF Store: [Fuseki 2.4.1] (https://jena.apache.org/download/#apache-jena-fuseki)
 
-## Learning Laravel
-
-Laravel has the most extensive and thorough documentation and video tutorial library of any modern web application framework. The [Laravel documentation](https://laravel.com/docs) is thorough, complete, and makes it a breeze to get started learning the framework.
-
-If you're not in the mood to read, [Laracasts](https://laracasts.com) contains over 900 video tutorials on a range of topics including Laravel, modern PHP, unit testing, JavaScript, and more. Boost the skill level of yourself and your entire team by digging into our comprehensive video library.
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
 
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+The project is open-sourced licensed under the [MIT license](http://opensource.org/licenses/MIT).
