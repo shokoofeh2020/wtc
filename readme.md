@@ -1,6 +1,7 @@
 ## Install
 
 1 Install - [Fuseki RDF Store](https://jena.apache.org/download/#apache-jena-fuseki).
+
 1.1 Create a new dataset named foodista and import Foodista triples from corresponding N-Quads file into dataset. 
 
 2 Install a local Web Server - [Xampp](https://www.apachefriends.org/download.html), You need to make sure that Apache is running flawlessly. The project has been also tested successfully with other web servers like Nginx. 
@@ -12,7 +13,9 @@
 5 Rename the extracted folder to 'wtc'. Now the directory should seems like this: for example, if you installed Xampp in drive C:, then you should have your project in C:\xampp\htdocs\wtc
 
 6 Edit the "hosts" file to enable mapping hostname to its IP address. 
-6.1 in Windows, you may find it here: C:\Windows\System32\drivers\etc and in Linux its usually located in: 
+
+6.1 in Windows, you may find it here: C:\Windows\System32\drivers\etc and in Linux its usually located in: /etc/hosts
+
 6.2 Most likely you're using IP version 4 address so add this line: 127.0.0.1	wtc.dev
 
 7 Install - [composer](https://getcomposer.org/download/). Consult this site and make sure composer has been installed correctly. 
