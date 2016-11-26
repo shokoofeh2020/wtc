@@ -9,7 +9,7 @@
 	<style>
 		.Logo {
 			text-align: center;
-			font-size : 60px;
+			font-size : 30px;
 			font-family : 'Tahoma';
 		}
 	</style>
@@ -49,30 +49,35 @@
 @section('content')
     <div class="container">
 		<div class="jumbotron" class="Logo">
-			<h1>What To Cook </h1>
-			<img src=images/Logo.jpg height =100px, width = 100%/>
+			<h2>What To Cook </h2>
+			<img src=images/Logo.jpg height =150px, width = 100%/>
 			<p></p>
 		</div>
-		<div class="col s10 m10 l10">
+
+		<div class="row">
+			<div class="col s5 m5 l5">
 				<p> What do you have in hand?</p>
                {{--input box for getting favorite ingredients--}}
                <div id="ingrediants" class="chips chips-placeholder" ></div>
-               <br>
+			</div>
+		    <div class="col s5 m5 l5">
                <p> What do you want to be not included?</p>
                {{--input box for getting dislikes--}}
                <div id="pleaseNo" class="chips chips-placeholder" ></div>
-               <br>
-               <p> For which meal do you like to search?</p>
+			</div>
+		    <div class="col s2 m2 l2">
+		    <p> Type of food?</p>
                {{--select meal--}}
                <select id="meal" class="input-field ">
-                   <option value="" disabled selected>Choose your option</option>
-                   <option value="Breakfast">Breakfast</option>
-                   <option value="Brunch">Branch</option>
-                   <option value="Lunch">Lunch</option>
-                   <option value="Beverage">Beverage</option>
+                   <option value="None" disabled selected>Choose your option</option>
+                   <option value="Vegan">Vegan</option>
+                   <option value="Seafood">Seafood</option>
+                   <option value="Soups">Soups</option>
+                   <option value="Meats">Meats</option>
+                   <option value="Pasta">Pasta</option>
                </select>
                <label>Select your meal:</label>
-
+		    </div>
 		</div>
 	
         <a class="btn-floating btn waves-effect waves-light red" onclick="$(this).searchFood();">
@@ -154,25 +159,24 @@
             });
 
             $.ajax({
-            	data:{likes:ings,dislikes:ingsNo,when:$('#meal').val()},
+            	data:{likes:ings,dislikes:ingsNo,catmeal:$('#meal').val()},
                 url: "{{URL::route('searchF')}}",
                 method: "POST",
                 async: true,
                 beforeSend: function(){
 //                  showing preloader, materializecss
+                    $("#food").html("<div> </div>");
                     $('#extracting').html(
                             '<div class="preloader-wrapper big active">'+
-                            '<div class="spinner-layer spinner-blue">'+
+                            '<div class="spinner-layer spinner-red">'+
                             '<div class="circle-clipper left">'+
                             '<div class="circle"></div>'+
-                            '</div>' +
-                            '<div class="gap-patch">'+
+                            '</div><div class="gap-patch">'+
                             '<div class="circle"></div>'+
-                            '</div>' +
-                            '<div class="circle-clipper right">'+
-                            '<div class="circle"></div>'+
+                            '</div><div class="circle-clipper right">'+
+                              '<div class="circle"></div>'+
                             '</div>'+
-                            '</div>'
+                          '</div>'
                     );
                 },
                 success: function(response){

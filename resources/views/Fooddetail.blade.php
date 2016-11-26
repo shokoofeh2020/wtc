@@ -50,19 +50,33 @@
     <div class="container">
 		<div class="jumbotron" class="Logo">
 			<h1>What To Cook </h1>
-			<img src=images/Logo.jpg height =100px, width = 100%/>
-			<p></p>
-			<p> what do you have in hand?
-			</p>
 		</div>
 		
-        <div class="chips chips-placeholder" >
-        </div>
+		<div class="row">
+			<div class="col s3 m3 l3">
+				<p> {{--input box for getting favorite ingredients--}} </p>
+                    {{$item->img->getValue()}}
+			</div>
+		    <div class="col s5 m5 l5">
+               <p> What do you want to be not included?</p>
+               {{--input box for getting dislikes--}}
+               <div id="pleaseNo" class="chips chips-placeholder" ></div>
+			</div>
+		    <div class="col s2 m2 l2">
+		    <p> Type of food?</p>
+               {{--select meal--}}
+               <select id="meal" class="input-field ">
+                   <option value="None" disabled selected>Choose your option</option>
+                   <option value="Vegan">Vegan</option>
+                   <option value="Seafood">Seafood</option>
+                   <option value="Soups">Soups</option>
+                   <option value="Meats">Meats</option>
+                   <option value="Pasta">Pasta</option>
+               </select>
+               <label>Select your meal:</label>
+		    </div>
+		</div>
 	
-        <a class="btn-floating btn waves-effect waves-light red" onclick="$(this).foodista3();">
-            <i class="material-icons">searchF</i>
-        </a>
-
         <label class="active" for="multipleInput">Search recipes </label>
 
         <div id="food">
