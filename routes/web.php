@@ -17,6 +17,8 @@ Route::get('/', function () {
 
 Route::get('/ings','semanticController@searchIngs');
 
+Route::get('/fooddetail','semanticController@Fooddet');
+
 Route::get('/con','semanticController@convert');
 
 Route::get('/foodistaa',function(){
